@@ -20,9 +20,13 @@
         _workSummary = aWorkSummary;
         _hourlyRate = anHourlyRate;
         _hoursWorked = theHoursWorked;
-        _totalAmountDue = theHoursWorked * anHourlyRate;
     }
     return self;
+}
+
+-(double)totalAmountDue
+{
+    return self.hoursWorked * self.hourlyRate;
 }
 
 @end
