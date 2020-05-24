@@ -10,4 +10,19 @@
 
 @implementation WASTimedTask
 
+- (instancetype)initWithClient:(NSString *)aClient
+                   workSummary:(NSString *)aWorkSummary
+                    hourlyRate:(double)anHourlyRate
+                   hoursWorked:(double)theHoursWorked
+{
+    if(self = [super init]) {
+        _client = aClient;
+        _workSummary = aWorkSummary;
+        _hourlyRate = anHourlyRate;
+        _hoursWorked = theHoursWorked;
+        _totalAmountDue = theHoursWorked * anHourlyRate;
+    }
+    return self;
+}
+
 @end

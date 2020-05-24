@@ -61,10 +61,9 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A2FF33C3247B335500D955D0 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
-				A2FF33BF247B310E00D955D0 /* WASTimedTask.h */,
-				A2FF33C0247B310E00D955D0 /* WASTimedTask.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -90,6 +89,15 @@
 				467FC84823F3738C00C15592 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A2FF33C3247B335500D955D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2FF33BF247B310E00D955D0 /* WASTimedTask.h */,
+				A2FF33C0247B310E00D955D0 /* WASTimedTask.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
