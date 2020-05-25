@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		A2FF33C1247B310E00D955D0 /* WASTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF33C0247B310E00D955D0 /* WASTimedTask.m */; };
+		A2FF33C6247B5D9300D955D0 /* WASTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF33C5247B5D9300D955D0 /* WASTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2FF33BF247B310E00D955D0 /* WASTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASTimedTask.h; sourceTree = "<group>"; };
 		A2FF33C0247B310E00D955D0 /* WASTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASTimedTask.m; sourceTree = "<group>"; };
+		A2FF33C4247B5D9300D955D0 /* WASTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASTimedTaskController.h; sourceTree = "<group>"; };
+		A2FF33C5247B5D9300D955D0 /* WASTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASTimedTaskController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A2FF33C3247B335500D955D0 /* Model */,
+				A2FF33C7247B5D9A00D955D0 /* Model Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -98,6 +102,15 @@
 				A2FF33C0247B310E00D955D0 /* WASTimedTask.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A2FF33C7247B5D9A00D955D0 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2FF33C4247B5D9300D955D0 /* WASTimedTaskController.h */,
+				A2FF33C5247B5D9300D955D0 /* WASTimedTaskController.m */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +188,7 @@
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				A2FF33C1247B310E00D955D0 /* WASTimedTask.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				A2FF33C6247B5D9300D955D0 /* WASTimedTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
