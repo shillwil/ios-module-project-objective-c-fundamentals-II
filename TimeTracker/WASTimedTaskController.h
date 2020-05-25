@@ -10,7 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class WASTimedTask;
+
 @interface WASTimedTaskController : NSObject
+
+// MARK: - Properties
+@property (nonatomic) NSMutableArray *tasksArray;
+
+- (WASTimedTask *)createTimedTaskWithClient:(NSString *)aClient
+                                workSummary:(NSString *)aWorkSummary
+                                 hourlyRate:(double)anHourlyRate
+                                hoursWorked:(double)theHoursWorked;
 
 @end
 
