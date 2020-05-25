@@ -31,7 +31,18 @@
 
 - (IBAction)logTime:(id)sender
 {
+    NSString *clientName = _clientNameTextField.text;
+    NSString *workSummaryText = _workSummaryTextField.text;
+    double rate = [_hourlyRateTextField.text doubleValue];
+    double hours = [_hoursWorkedTextField.text doubleValue];
     
+    [_taskController createTimedTaskWithClient:clientName workSummary:workSummaryText hourlyRate:rate hoursWorked:hours];
+    [_tasksTableView reloadData];
+    
+    _clientNameTextField.text = @"";
+    _workSummaryTextField.text = @"";
+    _hourlyRateTextField.text = @"";
+    _hoursWorkedTextField.text = @"";
 }
 
 

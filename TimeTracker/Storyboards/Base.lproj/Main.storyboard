@@ -73,7 +73,6 @@
                                         <state key="normal" title="Log Time"/>
                                         <connections>
                                             <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="x92-Hf-wUz"/>
-                                            <action selector="logTimeButtonPressed:" destination="QVk-7N-MGS" eventType="touchUpInside" id="gxk-nm-riN"/>
                                         </connections>
                                     </button>
                                 </subviews>
