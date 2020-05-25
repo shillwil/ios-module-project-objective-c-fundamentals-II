@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *hoursWorkedTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tasksTableView;
 
+@property (nonatomic) WASTimedTaskController *taskController;
 
 @end
 
@@ -24,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _taskController = [[WASTimedTaskController alloc] init];
+    self.tasksTableView.dataSource = self;
 }
 
 - (IBAction)logTime:(id)sender
