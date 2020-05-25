@@ -15,8 +15,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *hoursWorkedTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tasksTableView;
+@property (weak, nonatomic) IBOutlet UIButton *logTimeButton;
 
 @property (nonatomic) WASTimedTaskController *taskController;
+@property (nonatomic) NSInteger taskIndex;
 
 @end
 
@@ -27,16 +29,27 @@
     // Do any additional setup after loading the view.
     _taskController = [[WASTimedTaskController alloc] init];
     self.tasksTableView.dataSource = self;
+    self.tasksTableView.delegate = self;
 }
 
 - (IBAction)logTime:(id)sender
 {
-    NSString *clientName = _clientNameTextField.text;
-    NSString *workSummaryText = _workSummaryTextField.text;
-    double rate = [_hourlyRateTextField.text doubleValue];
-    double hours = [_hoursWorkedTextField.text doubleValue];
+    if([_logTimeButton.titleLabel.text  isEqual: @"Update"]) {
+        NSString *clientName = _clientNameTextField.text;
+        NSString *workSummaryText = _workSummaryTextField.text;
+        double rate = [_hourlyRateTextField.text doubleValue];
+        double hours = [_hoursWorkedTextField.text doubleValue];
+        
+        [_taskController updateTimedTaskWithClient:clientName workSummary:workSummaryText hourlyRate:rate hoursWorked:hours index:_taskIndex];
+    } else {
+        NSString *clientName = _clientNameTextField.text;
+        NSString *workSummaryText = _workSummaryTextField.text;
+        double rate = [_hourlyRateTextField.text doubleValue];
+        double hours = [_hoursWorkedTextField.text doubleValue];
+        
+        [_taskController createTimedTaskWithClient:clientName workSummary:workSummaryText hourlyRate:rate hoursWorked:hours];
+    }
     
-    [_taskController createTimedTaskWithClient:clientName workSummary:workSummaryText hourlyRate:rate hoursWorked:hours];
     [_tasksTableView reloadData];
     
     _clientNameTextField.text = @"";
@@ -44,18 +57,6 @@
     _hourlyRateTextField.text = @"";
     _hoursWorkedTextField.text = @"";
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -73,5 +74,19 @@
     return self.taskController.tasksArray.count;
 }
 
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WASTimedTask *task = [self.taskController.tasksArray objectAtIndex:indexPath.row];
+    NSNumber *totalHours = [NSNumber numberWithDouble:task.hoursWorked];
+    NSNumber *rate = [NSNumber numberWithDouble:task.hourlyRate];
+    
+    _clientNameTextField.text = task.client;
+    _workSummaryTextField.text = task.workSummary;
+    _hoursWorkedTextField.text = [totalHours stringValue];
+    _hourlyRateTextField.text = [rate stringValue];
+    _logTimeButton.titleLabel.text = @"Update";
+    _taskIndex = indexPath.row;
+}
 
 @end

@@ -23,6 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
                        hourlyRate:(double)anHourlyRate
                       hoursWorked:(double)theHoursWorked;
 
+- (void)updateTimedTaskWithClient:(NSString *)aClient
+                      workSummary:(NSString *)aWorkSummary
+                       hourlyRate:(double)anHourlyRate
+                      hoursWorked:(double)theHoursWorked
+                            index:(NSInteger)anIndex;
 @end
 
 NS_ASSUME_NONNULL_END

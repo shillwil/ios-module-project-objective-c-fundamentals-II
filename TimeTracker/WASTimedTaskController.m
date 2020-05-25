@@ -28,4 +28,15 @@
     [_tasksArray addObject:newTask];
 }
 
+- (void)updateTimedTaskWithClient:(NSString *)aClient
+                      workSummary:(NSString *)aWorkSummary
+                       hourlyRate:(double)anHourlyRate
+                      hoursWorked:(double)theHoursWorked
+                            index:(NSInteger)anIndex
+{
+    WASTimedTask *replacementTask = [[WASTimedTask alloc] initWithClient:aClient workSummary:aWorkSummary hourlyRate:anHourlyRate hoursWorked:theHoursWorked];
+    
+    [_tasksArray replaceObjectAtIndex:anIndex withObject:replacementTask];
+}
+
 @end

@@ -68,8 +68,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-dN-8qK">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-dN-8qK">
                                         <rect key="frame" x="0.0" y="168" width="374" height="30"/>
+                                        <viewLayoutGuide key="safeArea" id="Vvq-2m-lBj"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Log Time"/>
                                         <connections>
                                             <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="x92-Hf-wUz"/>
@@ -94,6 +96,7 @@
                         <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="bTu-j6-NZP"/>
                         <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="uVF-ki-0v7"/>
                         <outlet property="hoursWorkedTextField" destination="hJY-xA-vK5" id="tCT-D5-7Je"/>
+                        <outlet property="logTimeButton" destination="yC4-dN-8qK" id="ZVf-37-Zbz"/>
                         <outlet property="tasksTableView" destination="NGG-z0-Z9V" id="qrg-xX-dJd"/>
                         <outlet property="workSummaryTextField" destination="Zaq-vp-K0H" id="drM-1A-wKn"/>
                     </connections>
