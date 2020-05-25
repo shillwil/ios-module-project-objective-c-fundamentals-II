@@ -10,6 +10,13 @@
 
 @interface WASTimeTrackerViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *workSummaryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hoursWorkedTextField;
+@property (weak, nonatomic) IBOutlet UITableView *tasksTableView;
+
+
 @end
 
 @implementation WASTimeTrackerViewController
@@ -18,6 +25,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)logTime:(id)sender
+{
+    
+}
+
+
 
 /*
 #pragma mark - Navigation
