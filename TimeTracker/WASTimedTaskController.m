@@ -18,6 +18,14 @@
     return self;
 }
 
-
+- (void)createTimedTaskWithClient:(NSString *)aClient
+                      workSummary:(NSString *)aWorkSummary
+                       hourlyRate:(double)anHourlyRate
+                      hoursWorked:(double)theHoursWorked
+{
+    WASTimedTask *newTask = [[WASTimedTask alloc] initWithClient:aClient workSummary:aWorkSummary hourlyRate:anHourlyRate hoursWorked:theHoursWorked];
+    
+    [_tasksArray addObject:newTask];
+}
 
 @end
