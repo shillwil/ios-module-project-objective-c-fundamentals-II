@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		A2FF33C1247B310E00D955D0 /* WASTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF33C0247B310E00D955D0 /* WASTimedTask.m */; };
 		A2FF33C6247B5D9300D955D0 /* WASTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF33C5247B5D9300D955D0 /* WASTimedTaskController.m */; };
+		A2FF33CA247B66C700D955D0 /* WASTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FF33C9247B66C700D955D0 /* WASTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		A2FF33C0247B310E00D955D0 /* WASTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASTimedTask.m; sourceTree = "<group>"; };
 		A2FF33C4247B5D9300D955D0 /* WASTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASTimedTaskController.h; sourceTree = "<group>"; };
 		A2FF33C5247B5D9300D955D0 /* WASTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASTimedTaskController.m; sourceTree = "<group>"; };
+		A2FF33C8247B66C700D955D0 /* WASTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASTimeTrackerViewController.h; sourceTree = "<group>"; };
+		A2FF33C9247B66C700D955D0 /* WASTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASTimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			children = (
 				A2FF33C3247B335500D955D0 /* Model */,
 				A2FF33C7247B5D9A00D955D0 /* Model Controller */,
+				A2FF33CB247B66CE00D955D0 /* View Controllers */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -111,6 +115,15 @@
 				A2FF33C5247B5D9300D955D0 /* WASTimedTaskController.m */,
 			);
 			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		A2FF33CB247B66CE00D955D0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2FF33C8247B66C700D955D0 /* WASTimeTrackerViewController.h */,
+				A2FF33C9247B66C700D955D0 /* WASTimeTrackerViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +199,7 @@
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				A2FF33CA247B66C700D955D0 /* WASTimeTrackerViewController.m in Sources */,
 				A2FF33C1247B310E00D955D0 /* WASTimedTask.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 				A2FF33C6247B5D9300D955D0 /* WASTimedTaskController.m in Sources */,
