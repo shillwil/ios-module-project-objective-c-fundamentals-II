@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WASTimeTrackerViewController : UIViewController
+@interface WASTimeTrackerViewController : UIViewController <UITableViewDataSource>
 
 @end
 
