@@ -46,4 +46,21 @@
 }
 */
 
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+    WASTimedTask *task = [self.taskController.tasksArray objectAtIndex:indexPath.row];
+    NSNumber *total = [[NSNumber alloc] initWithDouble:task.totalAmountDue];
+    cell.textLabel.text = task.client;
+    cell.detailTextLabel.text = [formatter stringFromNumber:total];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.taskController.tasksArray.count;
+}
+
+
 @end
