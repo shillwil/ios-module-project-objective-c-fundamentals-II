@@ -10,4 +10,14 @@
 
 @implementation WASTimedTaskController
 
+- (instancetype)init
+{
+    if(self = [super init]) {
+        _tasksArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
+
 @end
